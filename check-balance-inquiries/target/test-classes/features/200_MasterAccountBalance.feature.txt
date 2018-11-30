@@ -1,0 +1,43 @@
+Feature: It must get master account balance
+         and response (HTTP Code) 200 OK.
+
+Scenario: This test validates that when placing valid data, respond with a status of 200
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|sid|12|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <200>
+	And the body response
+	"""
+	{
+	  "masterAccount": {
+	    "availableBalanceAmount": 366957.07,
+	    "currentBalanceAmount": 366957.07,
+	    "interestAmount": 192.0,
+	    "lastActivityDate": "180924",
+	    "pendingAuthorizationAmount": 0.0,
+	    "totalDepositAmount": 0.0,
+	    "totalWithdrawalAmount": 0.0
+	  }
+	}
+	"""

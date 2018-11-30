@@ -1,0 +1,622 @@
+Feature: It must indicate that the server could not understand the request due to invalid syntax 
+         and response (HTTP Code) 400 Bad Request.
+         
+Scenario: This test validates that when placing invalid data in dataCenterLocation (in this case set "spaces") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": " "
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in dataCenterLocation (in this case set ""letters"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "Wx"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in dataCenterLocation (in this case set ""characters"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "#$"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in accountNumber (in this case set ""spaces"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "56  34",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.accountNumber, No puede contener letras, caracteres especiales ni espacios en blanco, acepta  de 3 hasta 12 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in accountNumber (in this case set ""letters"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "ABCDE",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.accountNumber, No puede contener letras, caracteres especiales ni espacios en blanco, acepta  de 3 hasta 12 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in accountNumber (in this case set ""characters"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "$%$&",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.accountNumber, No puede contener letras, caracteres especiales ni espacios en blanco, acepta  de 3 hasta 12 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in accountNumber (in this case set ""less that 3 numbers"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "11",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.accountNumber, No puede contener letras, caracteres especiales ni espacios en blanco, acepta  de 3 hasta 12 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in accountNumber (in this case set ""more that 12 numbers"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "000123456789012",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.accountNumber, No puede contener letras, caracteres especiales ni espacios en blanco, acepta  de 3 hasta 12 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in accountNumber (in this case set ""NULL"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "",
+	    "branchCode": "347"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.accountNumber, No puede contener letras, caracteres especiales ni espacios en blanco, acepta  de 3 hasta 12 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in branchCode (in this case set ""NULL"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": ""
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.branchCode, No puede contener letras, caracteres especiales ni espacios en blanco, acepta hasta 4 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in branchCode (in this case set ""letters"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "ab"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.branchCode, No puede contener letras, caracteres especiales ni espacios en blanco, acepta hasta 4 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in branchCode (in this case set ""spaces"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "   "
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.branchCode, No puede contener letras, caracteres especiales ni espacios en blanco, acepta hasta 4 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in branchCode (in this case set ""characters"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "$#"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.branchCode, No puede contener letras, caracteres especiales ni espacios en blanco, acepta hasta 4 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in branchCode (in this case set  less that  3 numbers) it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "0"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.branchCode, No puede contener letras, caracteres especiales ni espacios en blanco, acepta hasta 4 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in branchCode (in this case set  more that  4 numbers) it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "51440796",
+	    "branchCode": "000000"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account.branchCode, No puede contener letras, caracteres especiales ni espacios en blanco, acepta hasta 4 posiciones. "
+	}
+	"""
+	
+Scenario: This test validates that when placing invalid data in account (in this case set ""NULL"") it respond with 400 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <400>
+	And the body response
+	"""
+	{
+	  "type": "invalid",
+	  "code": "400",
+	  "details": "MethodArgumentNotValidException",
+	  "location": "request",
+	  "moreInfo": "account, No puede ser null. "
+	}
+	"""

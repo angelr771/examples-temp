@@ -1,0 +1,674 @@
+Feature: It must get master account balance
+         and response (HTTP Code) 200 OK.
+
+  Scenario: Validate API Loan-Payment-History returns 200 when accountNumber, branchId and datacenterLocation are valid                           [90m# 200_LoanPaymentHistory.feature:4[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+      	"accountNumber": "3323852024",
+      	"branchId": "0000"
+        },
+        "dataCenterLocation": "4"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m200[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+       "payments": [
+          {
+            "paymentAmount": 375000,
+            "paymentDate": "000804",
+            "paymentId": "100",
+            "paymentDueDate": "040805",
+            "currencyCode": "1",
+            "account": {
+              "productCode": "1761",
+              "productName": "PREST AUTOMOVIL PERSONAL ND TIIE",
+              "riskLevelCode": "A",
+              "accountStatus": "LIQUIDADO",
+              "udiPaymentAmount": 6.16264
+            }
+          }
+        ]
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 200 when the dataCenterLocation is not requiered                                            [90m# 200_LoanPaymentHistory.feature:52[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+      	"accountNumber": "3323852024",
+      	"branchId": "0000"
+        }
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m200[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+       "payments": [
+          {
+            "paymentAmount": 375000,
+            "paymentDate": "000804",
+            "paymentId": "100",
+            "paymentDueDate": "040805",
+            "currencyCode": "1",
+            "account": {
+              "productCode": "1761",
+              "productName": "PREST AUTOMOVIL PERSONAL ND TIIE",
+              "riskLevelCode": "A",
+              "accountStatus": "LIQUIDADO",
+              "udiPaymentAmount": 6.16264
+            }
+          }
+        ]
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 200 when branchId is not required                                                           [90m# 200_LoanPaymentHistory.feature:99[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024"
+        },
+        "dataCenterLocation": "4"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m200[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "payments": [
+          {
+            "paymentAmount": 375000,
+            "paymentDate": "000804",
+            "paymentId": "100",
+            "paymentDueDate": "040805",
+            "currencyCode": "1",
+            "account": {
+              "productCode": "1761",
+              "productName": "PREST AUTOMOVIL PERSONAL ND TIIE",
+              "riskLevelCode": "A",
+              "accountStatus": "LIQUIDADO",
+              "udiPaymentAmount": 6.16264
+            }
+          }
+        ]
+      }
+      """
+Feature: It must indicate that the server could not understand the request due to invalid syntax
+         and response (HTTP Code) 400 Bad Request.
+
+  Scenario: Validate API Loan-Payment-History returns 400 when dataCenterLocation contains "spaces"                                               [90m# 400_ValidateRequest.feature:4[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": " "
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when dataCenterLocation contains "letters"                                              [90m# 400_ValidateRequest.feature:43[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "AB"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when dataCenterLocation contains "characters"                                           [90m# 400_ValidateRequest.feature:82[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "#$"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber contains "spaces"                                                    [90m# 400_ValidateRequest.feature:121[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "332   38",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber contains "letters"                                                   [90m# 400_ValidateRequest.feature:160[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "ABCD",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber contains "characters"                                                [90m# 400_ValidateRequest.feature:199[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "#$%&",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber contains less that 3 numbers                                         [90m# 400_ValidateRequest.feature:238[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "12",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber contains more that 12 numbers                                        [90m# 400_ValidateRequest.feature:277[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "12345678901234",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber is not required                                                      [90m# 400_ValidateRequest.feature:316[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber is all zeroes                                                        [90m# 400_ValidateRequest.feature:354[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "000000000000",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when accountNumber is empty                                                             [90m# 400_ValidateRequest.feature:393[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.accountNumber, No acepta letras, caracteres especiales, espacios en blanco, nulos, ni solo ceros. Acepta de 3 hasta 12 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when the dataCenterLocation is empty                                                    [90m# 400_ValidateRequest.feature:432[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3386858066",
+          "branchId": "0000"
+        },
+        "dataCenterLocation": ""
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "dataCenterLocation, No puede contener letras, caracteres especiales ni espacios en blanco, solo puede ir 4 o 10. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when branchId contains "spaces"                                                         [90m# 400_ValidateRequest.feature:471[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "  "
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.branchId, No acepta letras, caracteres especiales, espacios en blanco ni nulos. Acepta 4 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when branchId contains "letters"                                                        [90m# 400_ValidateRequest.feature:510[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "ABC"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.branchId, No acepta letras, caracteres especiales, espacios en blanco ni nulos. Acepta 4 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when branchId contains "characters"                                                     [90m# 400_ValidateRequest.feature:549[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "#$"
+        },
+        "dataCenterLocation": "10"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.branchId, No acepta letras, caracteres especiales, espacios en blanco ni nulos. Acepta 4 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when branchId contains "more that 4 numbers"                                            [90m# 400_ValidateRequest.feature:588[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "12345"
+        },
+        "dataCenterLocation": "4"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.branchId, No acepta letras, caracteres especiales, espacios en blanco ni nulos. Acepta 4 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when branchId contains "less that 4 numbers"                                            [90m# 400_ValidateRequest.feature:627[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": "123"
+        },
+        "dataCenterLocation": "4"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.branchId, No acepta letras, caracteres especiales, espacios en blanco ni nulos. Acepta 4 posiciones. "
+      }
+      """
+
+  Scenario: Validate API Loan-Payment-History returns 400 when branchId is empty                                                                  [90m# 400_ValidateRequest.feature:666[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+          "accountNumber": "3323852024",
+          "branchId": ""
+        },
+        "dataCenterLocation": "4"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m400[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "invalid",
+        "code": "400",
+        "details": "MethodArgumentNotValidException",
+        "location": "request",
+        "moreInfo": "account.branchId, No acepta letras, caracteres especiales, espacios en blanco ni nulos. Acepta 4 posiciones. "
+      }
+      """
+Feature: It must indicate that the system not found information with the data provided
+         and response (HTTP Code) 404 Bad Request.
+
+  Scenario: Validate API Loan-Payment-History returns 404 when accountNumber is incorrect                                                         [90m# 404_ExecuteWithNotFound.feature:4[0m
+    [32mGiven [0m[32mthe service with url "[0m[32m[1mPOST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve[0m[32m"[0m [90m# ServiceExecutor.the_service_with(String)[0m
+    [32mAnd [0m[32mthe simulated response[0m                                                                                                                    [90m# ServiceExecutor.the_simulated_response(String)[0m
+      """
+
+      """
+    [32mWhen [0m[32mthe service is executed with headers[0m                                                                                                     [90m# ServiceExecutor.the_service_is_executed_with_headers(Header>)[0m
+    [32mAnd [0m[32mthe body request[0m                                                                                                                          [90m# ServiceExecutor.the_body_request(String)[0m
+      """
+      {
+        "account": {
+      	"accountNumber": "123456",
+      	"branchId": "0000"
+        },
+        "dataCenterLocation": "4"
+      }
+      """
+    [32mThen [0m[32mthe service should response Http code <[0m[32m[1m404[0m[32m>[0m                                                                                              [90m# ServiceExecutor.the_service_should_response_Http_code(int)[0m
+    [32mAnd [0m[32mthe body response[0m                                                                                                                         [90m# ServiceExecutor.the_body_response(String)[0m
+      """
+      {
+        "type": "error",
+        "code": "404",
+        "details": "Not Found Exception",
+        "location": "Unisys comunication",
+        "moreInfo": "NO EXISTE CONTRATO"
+      }
+      """

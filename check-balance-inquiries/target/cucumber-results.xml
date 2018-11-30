@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="22" time="1.879453">
+<testcase classname="It must get master account balance" name="Validate API Loan-Payment-History returns 200 when accountNumber, branchId and datacenterLocation are valid" time="0.157974">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <200>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must get master account balance" name="Validate API Loan-Payment-History returns 200 when the dataCenterLocation is not requiered" time="0.139262">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <200>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must get master account balance" name="Validate API Loan-Payment-History returns 200 when branchId is not required" time="0.134526">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <200>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when dataCenterLocation contains &quot;spaces&quot;" time="0.072796">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when dataCenterLocation contains &quot;letters&quot;" time="0.068752">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when dataCenterLocation contains &quot;characters&quot;" time="0.071874">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber contains &quot;spaces&quot;" time="0.071053">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber contains &quot;letters&quot;" time="0.071336">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber contains &quot;characters&quot;" time="0.066744">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber contains less that 3 numbers" time="0.076436">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber contains more that 12 numbers" time="0.070289">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber is not required" time="0.068227">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber is all zeroes" time="0.111396">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when accountNumber is empty" time="0.068816">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when the dataCenterLocation is empty" time="0.076258">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when branchId contains &quot;spaces&quot;" time="0.069445">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when branchId contains &quot;letters&quot;" time="0.068936">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when branchId contains &quot;characters&quot;" time="0.092952">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when branchId contains &quot;more that 4 numbers&quot;" time="0.065391">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when branchId contains &quot;less that 4 numbers&quot;" time="0.062986">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the server could not understand the request due to invalid syntax" name="Validate API Loan-Payment-History returns 400 when branchId is empty" time="0.070251">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <400>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="It must indicate that the system not found information with the data provided" name="Validate API Loan-Payment-History returns 404 when accountNumber is incorrect" time="0.123753">
+<system-out><![CDATA[Given the service with url "POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve".passed
+And the simulated response..................................................passed
+When the service is executed with headers...................................passed
+And the body request........................................................passed
+Then the service should response Http code <404>............................passed
+And the body response.......................................................passed
+]]></system-out>
+</testcase>
+</testsuite>

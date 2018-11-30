@@ -1,0 +1,632 @@
+[
+  {
+    "source": "^the body response$",
+    "steps": [
+      {
+        "name": "the body response",
+        "aggregatedDurations": {
+          "average": 0.068418895,
+          "median": 0.054980489
+        },
+        "durations": [
+          {
+            "duration": 0.132833679,
+            "location": "200_LoanPaymentHistory.feature:30"
+          },
+          {
+            "duration": 0.122878416,
+            "location": "200_LoanPaymentHistory.feature:77"
+          },
+          {
+            "duration": 0.11660038,
+            "location": "200_LoanPaymentHistory.feature:126"
+          },
+          {
+            "duration": 0.053882313,
+            "location": "400_ValidateRequest.feature:32"
+          },
+          {
+            "duration": 0.050612956,
+            "location": "400_ValidateRequest.feature:71"
+          },
+          {
+            "duration": 0.053799118,
+            "location": "400_ValidateRequest.feature:110"
+          },
+          {
+            "duration": 0.053596463,
+            "location": "400_ValidateRequest.feature:149"
+          },
+          {
+            "duration": 0.05508971,
+            "location": "400_ValidateRequest.feature:188"
+          },
+          {
+            "duration": 0.053047802,
+            "location": "400_ValidateRequest.feature:227"
+          },
+          {
+            "duration": 0.063099485,
+            "location": "400_ValidateRequest.feature:266"
+          },
+          {
+            "duration": 0.056979733,
+            "location": "400_ValidateRequest.feature:305"
+          },
+          {
+            "duration": 0.054738157,
+            "location": "400_ValidateRequest.feature:343"
+          },
+          {
+            "duration": 0.053778213,
+            "location": "400_ValidateRequest.feature:382"
+          },
+          {
+            "duration": 0.054871269,
+            "location": "400_ValidateRequest.feature:421"
+          },
+          {
+            "duration": 0.064201501,
+            "location": "400_ValidateRequest.feature:460"
+          },
+          {
+            "duration": 0.055777883,
+            "location": "400_ValidateRequest.feature:499"
+          },
+          {
+            "duration": 0.052320377,
+            "location": "400_ValidateRequest.feature:538"
+          },
+          {
+            "duration": 0.082427643,
+            "location": "400_ValidateRequest.feature:577"
+          },
+          {
+            "duration": 0.051601912,
+            "location": "400_ValidateRequest.feature:616"
+          },
+          {
+            "duration": 0.052073352,
+            "location": "400_ValidateRequest.feature:655"
+          },
+          {
+            "duration": 0.058655156,
+            "location": "400_ValidateRequest.feature:694"
+          },
+          {
+            "duration": 0.112350174,
+            "location": "404_ExecuteWithNotFound.feature:32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the body request$",
+    "steps": [
+      {
+        "name": "the body request",
+        "aggregatedDurations": {
+          "average": 0.000120216,
+          "median": 0.00011818
+        },
+        "durations": [
+          {
+            "duration": 0.000148045,
+            "location": "200_LoanPaymentHistory.feature:19"
+          },
+          {
+            "duration": 0.000148898,
+            "location": "200_LoanPaymentHistory.feature:67"
+          },
+          {
+            "duration": 0.000185163,
+            "location": "200_LoanPaymentHistory.feature:116"
+          },
+          {
+            "duration": 0.000133965,
+            "location": "400_ValidateRequest.feature:21"
+          },
+          {
+            "duration": 0.000131406,
+            "location": "400_ValidateRequest.feature:60"
+          },
+          {
+            "duration": 0.000117753,
+            "location": "400_ValidateRequest.feature:99"
+          },
+          {
+            "duration": 0.00012458,
+            "location": "400_ValidateRequest.feature:138"
+          },
+          {
+            "duration": 0.000117753,
+            "location": "400_ValidateRequest.feature:177"
+          },
+          {
+            "duration": 0.000118607,
+            "location": "400_ValidateRequest.feature:216"
+          },
+          {
+            "duration": 0.000123299,
+            "location": "400_ValidateRequest.feature:255"
+          },
+          {
+            "duration": 0.00011562,
+            "location": "400_ValidateRequest.feature:294"
+          },
+          {
+            "duration": 0.000119886,
+            "location": "400_ValidateRequest.feature:333"
+          },
+          {
+            "duration": 0.000119033,
+            "location": "400_ValidateRequest.feature:371"
+          },
+          {
+            "duration": 0.000116474,
+            "location": "400_ValidateRequest.feature:410"
+          },
+          {
+            "duration": 0.000111354,
+            "location": "400_ValidateRequest.feature:449"
+          },
+          {
+            "duration": 0.000132685,
+            "location": "400_ValidateRequest.feature:488"
+          },
+          {
+            "duration": 0.00006997,
+            "location": "400_ValidateRequest.feature:527"
+          },
+          {
+            "duration": 0.000101114,
+            "location": "400_ValidateRequest.feature:566"
+          },
+          {
+            "duration": 0.000094715,
+            "location": "400_ValidateRequest.feature:605"
+          },
+          {
+            "duration": 0.000099834,
+            "location": "400_ValidateRequest.feature:644"
+          },
+          {
+            "duration": 0.000108793,
+            "location": "400_ValidateRequest.feature:683"
+          },
+          {
+            "duration": 0.000105808,
+            "location": "404_ExecuteWithNotFound.feature:21"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the simulated response$",
+    "steps": [
+      {
+        "name": "the simulated response",
+        "aggregatedDurations": {
+          "average": 0.000060098,
+          "median": 0.00005653
+        },
+        "durations": [
+          {
+            "duration": 0.000133113,
+            "location": "200_LoanPaymentHistory.feature:6"
+          },
+          {
+            "duration": 0.000058877,
+            "location": "200_LoanPaymentHistory.feature:54"
+          },
+          {
+            "duration": 0.000058023,
+            "location": "200_LoanPaymentHistory.feature:101"
+          },
+          {
+            "duration": 0.000061863,
+            "location": "400_ValidateRequest.feature:6"
+          },
+          {
+            "duration": 0.000062289,
+            "location": "400_ValidateRequest.feature:45"
+          },
+          {
+            "duration": 0.00005333,
+            "location": "400_ValidateRequest.feature:84"
+          },
+          {
+            "duration": 0.000061009,
+            "location": "400_ValidateRequest.feature:123"
+          },
+          {
+            "duration": 0.000060583,
+            "location": "400_ValidateRequest.feature:162"
+          },
+          {
+            "duration": 0.000055037,
+            "location": "400_ValidateRequest.feature:201"
+          },
+          {
+            "duration": 0.00005845,
+            "location": "400_ValidateRequest.feature:240"
+          },
+          {
+            "duration": 0.00005973,
+            "location": "400_ValidateRequest.feature:279"
+          },
+          {
+            "duration": 0.00005589,
+            "location": "400_ValidateRequest.feature:318"
+          },
+          {
+            "duration": 0.000052051,
+            "location": "400_ValidateRequest.feature:356"
+          },
+          {
+            "duration": 0.000052904,
+            "location": "400_ValidateRequest.feature:395"
+          },
+          {
+            "duration": 0.000049491,
+            "location": "400_ValidateRequest.feature:434"
+          },
+          {
+            "duration": 0.00005717,
+            "location": "400_ValidateRequest.feature:473"
+          },
+          {
+            "duration": 0.000048638,
+            "location": "400_ValidateRequest.feature:512"
+          },
+          {
+            "duration": 0.000054183,
+            "location": "400_ValidateRequest.feature:551"
+          },
+          {
+            "duration": 0.000052477,
+            "location": "400_ValidateRequest.feature:590"
+          },
+          {
+            "duration": 0.000055037,
+            "location": "400_ValidateRequest.feature:629"
+          },
+          {
+            "duration": 0.000049063,
+            "location": "400_ValidateRequest.feature:668"
+          },
+          {
+            "duration": 0.000072955,
+            "location": "404_ExecuteWithNotFound.feature:6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the service with url \"(.*?)\"$",
+    "steps": [
+      {
+        "name": "the service with url \"POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve\"",
+        "aggregatedDurations": {
+          "average": 0.014217919,
+          "median": 0.011795155
+        },
+        "durations": [
+          {
+            "duration": 0.020298342,
+            "location": "200_LoanPaymentHistory.feature:5"
+          },
+          {
+            "duration": 0.014213149,
+            "location": "200_LoanPaymentHistory.feature:53"
+          },
+          {
+            "duration": 0.012637134,
+            "location": "200_LoanPaymentHistory.feature:100"
+          },
+          {
+            "duration": 0.014080463,
+            "location": "400_ValidateRequest.feature:5"
+          },
+          {
+            "duration": 0.011959626,
+            "location": "400_ValidateRequest.feature:44"
+          },
+          {
+            "duration": 0.010994135,
+            "location": "400_ValidateRequest.feature:83"
+          },
+          {
+            "duration": 0.012194279,
+            "location": "400_ValidateRequest.feature:122"
+          },
+          {
+            "duration": 0.014635524,
+            "location": "400_ValidateRequest.feature:161"
+          },
+          {
+            "duration": 0.011739052,
+            "location": "400_ValidateRequest.feature:200"
+          },
+          {
+            "duration": 0.011653724,
+            "location": "400_ValidateRequest.feature:239"
+          },
+          {
+            "duration": 0.011442536,
+            "location": "400_ValidateRequest.feature:278"
+          },
+          {
+            "duration": 0.011851259,
+            "location": "400_ValidateRequest.feature:317"
+          },
+          {
+            "duration": 0.055445956,
+            "location": "400_ValidateRequest.feature:355"
+          },
+          {
+            "duration": 0.010718951,
+            "location": "400_ValidateRequest.feature:394"
+          },
+          {
+            "duration": 0.010724071,
+            "location": "400_ValidateRequest.feature:433"
+          },
+          {
+            "duration": 0.01142035,
+            "location": "400_ValidateRequest.feature:472"
+          },
+          {
+            "duration": 0.015371908,
+            "location": "400_ValidateRequest.feature:511"
+          },
+          {
+            "duration": 0.009104965,
+            "location": "400_ValidateRequest.feature:550"
+          },
+          {
+            "duration": 0.012305633,
+            "location": "400_ValidateRequest.feature:589"
+          },
+          {
+            "duration": 0.009529047,
+            "location": "400_ValidateRequest.feature:628"
+          },
+          {
+            "duration": 0.010374652,
+            "location": "400_ValidateRequest.feature:667"
+          },
+          {
+            "duration": 0.010099468,
+            "location": "404_ExecuteWithNotFound.feature:5"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the service is executed with headers$",
+    "steps": [
+      {
+        "name": "the service is executed with headers",
+        "aggregatedDurations": {
+          "average": 0.002479953,
+          "median": 0.001491326
+        },
+        "durations": [
+          {
+            "duration": 0.004357294,
+            "location": "200_LoanPaymentHistory.feature:9"
+          },
+          {
+            "duration": 0.001838827,
+            "location": "200_LoanPaymentHistory.feature:57"
+          },
+          {
+            "duration": 0.004926434,
+            "location": "200_LoanPaymentHistory.feature:104"
+          },
+          {
+            "duration": 0.004546296,
+            "location": "400_ValidateRequest.feature:9"
+          },
+          {
+            "duration": 0.005890218,
+            "location": "400_ValidateRequest.feature:48"
+          },
+          {
+            "duration": 0.006802378,
+            "location": "400_ValidateRequest.feature:87"
+          },
+          {
+            "duration": 0.004980618,
+            "location": "400_ValidateRequest.feature:126"
+          },
+          {
+            "duration": 0.001333683,
+            "location": "400_ValidateRequest.feature:165"
+          },
+          {
+            "duration": 0.001679689,
+            "location": "400_ValidateRequest.feature:204"
+          },
+          {
+            "duration": 0.001402372,
+            "location": "400_ValidateRequest.feature:243"
+          },
+          {
+            "duration": 0.001580281,
+            "location": "400_ValidateRequest.feature:282"
+          },
+          {
+            "duration": 0.001365255,
+            "location": "400_ValidateRequest.feature:321"
+          },
+          {
+            "duration": 0.001215502,
+            "location": "400_ValidateRequest.feature:359"
+          },
+          {
+            "duration": 0.002959189,
+            "location": "400_ValidateRequest.feature:398"
+          },
+          {
+            "duration": 0.001068738,
+            "location": "400_ValidateRequest.feature:437"
+          },
+          {
+            "duration": 0.001971513,
+            "location": "400_ValidateRequest.feature:476"
+          },
+          {
+            "duration": 0.001037166,
+            "location": "400_ValidateRequest.feature:515"
+          },
+          {
+            "duration": 0.001178385,
+            "location": "400_ValidateRequest.feature:554"
+          },
+          {
+            "duration": 0.001256887,
+            "location": "400_ValidateRequest.feature:593"
+          },
+          {
+            "duration": 0.001144681,
+            "location": "400_ValidateRequest.feature:632"
+          },
+          {
+            "duration": 0.000977437,
+            "location": "400_ValidateRequest.feature:671"
+          },
+          {
+            "duration": 0.001046126,
+            "location": "404_ExecuteWithNotFound.feature:9"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "source": "^the service should response Http code \u003c(\\d+)\u003e$",
+    "steps": [
+      {
+        "name": "the service should response Http code \u003c200\u003e",
+        "aggregatedDurations": {
+          "average": 0.000133254,
+          "median": 0.000111354
+        },
+        "durations": [
+          {
+            "duration": 0.000190709,
+            "location": "200_LoanPaymentHistory.feature:29"
+          },
+          {
+            "duration": 0.000111354,
+            "location": "200_LoanPaymentHistory.feature:76"
+          },
+          {
+            "duration": 0.000097701,
+            "location": "200_LoanPaymentHistory.feature:125"
+          }
+        ]
+      },
+      {
+        "name": "the service should response Http code \u003c400\u003e",
+        "aggregatedDurations": {
+          "average": 0.000119815,
+          "median": 0.000080635
+        },
+        "durations": [
+          {
+            "duration": 0.000079782,
+            "location": "400_ValidateRequest.feature:31"
+          },
+          {
+            "duration": 0.000081915,
+            "location": "400_ValidateRequest.feature:70"
+          },
+          {
+            "duration": 0.000097275,
+            "location": "400_ValidateRequest.feature:109"
+          },
+          {
+            "duration": 0.000084902,
+            "location": "400_ValidateRequest.feature:148"
+          },
+          {
+            "duration": 0.000081489,
+            "location": "400_ValidateRequest.feature:187"
+          },
+          {
+            "duration": 0.000094714,
+            "location": "400_ValidateRequest.feature:226"
+          },
+          {
+            "duration": 0.000087462,
+            "location": "400_ValidateRequest.feature:265"
+          },
+          {
+            "duration": 0.000084048,
+            "location": "400_ValidateRequest.feature:304"
+          },
+          {
+            "duration": 0.000087461,
+            "location": "400_ValidateRequest.feature:342"
+          },
+          {
+            "duration": 0.000774781,
+            "location": "400_ValidateRequest.feature:381"
+          },
+          {
+            "duration": 0.000076795,
+            "location": "400_ValidateRequest.feature:420"
+          },
+          {
+            "duration": 0.000074662,
+            "location": "400_ValidateRequest.feature:459"
+          },
+          {
+            "duration": 0.000075089,
+            "location": "400_ValidateRequest.feature:498"
+          },
+          {
+            "duration": 0.000079782,
+            "location": "400_ValidateRequest.feature:537"
+          },
+          {
+            "duration": 0.000075942,
+            "location": "400_ValidateRequest.feature:576"
+          },
+          {
+            "duration": 0.000068689,
+            "location": "400_ValidateRequest.feature:615"
+          },
+          {
+            "duration": 0.000074662,
+            "location": "400_ValidateRequest.feature:654"
+          },
+          {
+            "duration": 0.000077222,
+            "location": "400_ValidateRequest.feature:693"
+          }
+        ]
+      },
+      {
+        "name": "the service should response Http code \u003c404\u003e",
+        "aggregatedDurations": {
+          "average": 0.000072956,
+          "median": 0.000072956
+        },
+        "durations": [
+          {
+            "duration": 0.000072956,
+            "location": "404_ExecuteWithNotFound.feature:31"
+          }
+        ]
+      }
+    ]
+  }
+]

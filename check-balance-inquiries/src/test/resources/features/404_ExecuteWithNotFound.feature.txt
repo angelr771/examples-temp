@@ -1,0 +1,80 @@
+Feature: It must indicate that the system not found information with the data provided 
+         and response (HTTP Code) 404 Bad Request.
+         
+Scenario: This test validates that when branchId does not correspond to the accountNumber, and the dataCenterLocation is correct, it respond with 404 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""	
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "7734235",
+	    "branchCode": "0870"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <404>
+	And the body response
+	"""
+	{
+	  "type": "error",
+	  "code": "404",
+	  "details": "Not Found Exception",
+	  "location": "Unisys comunication",
+	  "moreInfo": "ERROR : NO EXISTE CONTRATO EN LA BASE DE DATOS"
+	}
+	"""
+
+Scenario: This test validates that when accountNumber does not correspond to the branchId, and the dataCenterLocation is correct, it respond with 404 status
+	Given the service with url "POST http://acmt-api-a-master-account-balance-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/accounts/master/balance"
+	And the simulated response
+	"""	
+	"""
+	When the service is executed with headers
+	|header|value|
+	|Authorization|TOKENEXAMPLE|
+	|Accept-Language|MX|
+	|Accept|application/json|
+	|uuid|DU0908002345318|
+	|Content-Type|application/json|
+	|countryCode|MX|
+	|sid|12|
+	|businesscode|1|
+	|ChannelId|1521|
+	|client_id|SG05070|
+	And the body request
+	"""
+	{
+	  "account": {
+	    "accountNumber": "9999795",
+	    "branchCode": "0870"
+	  },
+	  "dataCenterLocation": "10"
+	}
+	"""
+	Then the service should response Http code <404>
+	And the body response
+	"""
+	{
+	  "type": "error",
+	  "code": "404",
+	  "details": "Not Found Exception",
+	  "location": "Unisys comunication",
+	  "moreInfo": "ERROR : NO EXISTE CONTRATO EN LA BASE DE DATOS"
+	}
+	"""

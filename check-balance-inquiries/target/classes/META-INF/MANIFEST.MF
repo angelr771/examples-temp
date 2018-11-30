@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: check-balance-inquiries
+Implementation-Version: 1.0.1.${BUILD_NUMBER}
+Built-By: ag99406
+Implementation-Vendor-Id: com.citi.171087.banamex.d.msg
+Build-Jdk: 1.8.0_121
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/check-balance-inquiries
+Created-By: Maven Integration for Eclipse
+

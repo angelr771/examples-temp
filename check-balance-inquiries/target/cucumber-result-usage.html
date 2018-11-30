@@ -1,0 +1,1666 @@
+<html>
+	<head>
+		<style type="text/css">
+h1 {background-color:#9999CC}
+h2 {background-color:#BBBBCC}
+h3 {background-color:#DDDDFF}
+th {border:1px solid black;background-color:#CCCCDD;}
+td{border:1px solid black;}
+.none {border:0px none black;}
+table{border:1px solid black;border-collapse: collapse;}
+tr:nth-child(even) {background: #CCC}
+tr:nth-child(odd) {background: #FFF}
+        </style>
+        <title>Cucumber Steps Usage Report</title>
+    </head>
+    <body>
+    	<h1>Cucumber Usage Statistics</h1>
+    	<h2>Overview Graph</h2>
+    	<p>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+	width="500"
+    height="400">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+        	<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+            <feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+            <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+        </filter>
+        <radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%" fy="100%">
+            <stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+            <stop offset="100%" style="stop-color:gold;stop-opacity:0.7" />
+        </radialGradient>
+        <linearGradient id="grad2" cx="0%" cy="100%" r="150%" fx="0%" fy="100%">
+        	<stop offset="0%" style="stop-color:red;stop-opacity:0.7" />
+            <stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+            <stop offset="100%" style="stop-color:green;stop-opacity:0.7" />
+        </linearGradient>
+    </defs>
+    <rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)" />
+		<line x1="40" y1="30" x2="40" y2="300" style="stroke:black;stroke-width:1" />
+        <line x1="40" y1="300" x2="350" y2="300" style="stroke:black;stroke-width:1" />
+        <polygon points="35,50 40,30 45,50"
+            style="fill:black;stroke:black;stroke-width:1" />
+        <polygon points="350,300 330,305 330,295"
+            style="fill:black;stroke:black;stroke-width:1" />
+        <polygon points="40,300
+        		 40,300
+        		 51.739,300
+        		 63.478,300
+        		 75.217,300
+        		 86.957,300
+        		 98.696,300
+        		 110.435,300
+        		 122.174,300
+        		 133.913,300
+        		 145.652,300
+        		 157.391,300
+        		 169.13,300
+        		 180.87,300
+        		 192.609,300
+        		 204.348,300
+        		 216.087,300
+        		 227.826,300
+        		 239.565,300
+        		 251.304,300
+        		 263.043,300
+        		 274.783,300
+        		 286.522,300
+        		 298.261,94.286
+        		 310,300
+        " style="stroke:black;stroke-width:1"  fill="url(#grad2)" />
+
+			<line x1="40"
+				y1="300"
+				x2="40" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="40" y="310" font-size="8">0</text>
+			<line x1="81.739"
+				y1="300"
+				x2="81.739" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="81.739" y="310" font-size="8">4</text>
+			<line x1="123.478"
+				y1="300"
+				x2="123.478" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="123.478" y="310" font-size="8">7</text>
+			<line x1="165.217"
+				y1="300"
+				x2="165.217" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="165.217" y="310" font-size="8">11</text>
+			<line x1="206.957"
+				y1="300"
+				x2="206.957" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="206.957" y="310" font-size="8">14</text>
+			<line x1="248.696"
+				y1="300"
+				x2="248.696" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="248.696" y="310" font-size="8">18</text>
+			<line x1="290.435"
+				y1="300"
+				x2="290.435" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="290.435" y="310" font-size="8">21</text>
+			<line x1="332.174"
+				y1="300"
+				x2="332.174" y2="305"
+					style="stroke:black;stroke-width:1" />
+            <text x="332.174" y="310" font-size="8">25</text>
+
+			<line x1="40" y1="300"
+				x2="35" y2="300"
+				style="stroke:black;stroke-width:1" />
+            <text x="35" y="300"
+            	transform="rotate(-90 35,300)" font-size = "8">0</text>
+			<line x1="40" y1="235.714"
+				x2="35" y2="235.714"
+				style="stroke:black;stroke-width:1" />
+            <text x="35" y="235.714"
+            	transform="rotate(-90 35,235.714)" font-size = "8">2</text>
+			<line x1="40" y1="171.429"
+				x2="35" y2="171.429"
+				style="stroke:black;stroke-width:1" />
+            <text x="35" y="171.429"
+            	transform="rotate(-90 35,171.429)" font-size = "8">4</text>
+			<line x1="40" y1="107.143"
+				x2="35" y2="107.143"
+				style="stroke:black;stroke-width:1" />
+            <text x="35" y="107.143"
+            	transform="rotate(-90 35,107.143)" font-size = "8">6</text>
+			<line x1="40" y1="42.857"
+				x2="35" y2="42.857"
+				style="stroke:black;stroke-width:1" />
+            <text x="35" y="42.857"
+            	transform="rotate(-90 35,42.857)" font-size = "8">8</text>
+
+
+
+
+        <line stroke-dasharray="10,10" x1="298.261" y1="30"
+        	 x2="298.261" y2="300" style="stroke:yellow;stroke-width:3" />
+        <line stroke-dasharray="10,10" x1="298.261" y1="30"
+        	 x2="298.261" y2="300" style="stroke:red;stroke-width:3" />
+        <rect x="60%" y="20%" width="28%" height="20%" stroke="black"
+             stroke-width="1" fill="white" filter="url(#f1)" />
+        <line x1="62%" y1="29%" x2="67%" y2="29%" stroke-dasharray="5,5"
+             style="stroke:red;stroke-width:3" />
+         <text x="69%" y="30%"
+             font-weight = "bold" font-size = "12">Average: 22</text>"
+        <line x1="62%" y1="34%" x2="67%" y2="34%" stroke-dasharray="5,5"
+        	style="stroke:yellow;stroke-width:3" /><text x="69%" y="35%"
+        	 font-weight = "bold" font-size = "12">Median: 22</text>
+        <text x="60%" y="55%" font-weight = "bold" font-size = "40" fill="green">95.5%</text>
+        <text x="66%" y="60%" font-weight = "bold" font-size = "16" fill="green">Re-use</text>
+        <text x="120" y="330" font-weight = "bold" font-size = "14" >Step re-use count</text>
+        <text x="20" y="220" font-weight = "bold" font-size = "14"
+         transform="rotate(-90 20,220)">Steps count</text>
+
+</svg>
+        </p>
+        <h2>Overview Table</h2>
+        <p>
+        <table>
+        	<tr>
+        		<th rowspan="2"><a id="top">#</a></th>
+        		<th rowspan="2">Expression</th>
+        		<th rowspan="2">Occurences</th>
+        		<th colspan="5">Duration</th>
+    		</tr>
+    		<tr>
+        		<th>Average</th>
+        		<th>Median</th>
+        		<th>Minimal</th>
+        		<th>Maximal</th>
+        		<th>Total</th>
+    		</tr>
+    		<tr style="background:lightgreen">
+    			<td>1</td>
+                <td width="60%"><a href="#_5Ethe_20body_20response_24">^the body response$</a></td><td>22</td>
+               		<td>0.1s</td>
+               		<td>0.07s</td>
+               		<td>0.05s</td>
+               		<td>0.55s</td>
+               		<td>2.12s</td>
+            </tr>
+    		<tr style="background:lightgreen">
+    			<td>2</td>
+                <td width="60%"><a href="#_5Ethe_20body_20request_24">^the body request$</a></td><td>22</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0.01s</td>
+               		<td>0.02s</td>
+            </tr>
+    		<tr style="background:gold">
+    			<td>3</td>
+                <td width="60%"><a href="#_5Ethe_20simulated_20response_24">^the simulated response$</a></td><td>22</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0.01s</td>
+            </tr>
+    		<tr style="background:gold">
+    			<td>4</td>
+                <td width="60%"><a href="#_5Ethe_20service_20with_20url_20_22(.*_3F)_22_24">^the service with url &quot;(.*?)&quot;$</a></td><td>22</td>
+               		<td>0.1s</td>
+               		<td>0.03s</td>
+               		<td>0.01s</td>
+               		<td>1.54s</td>
+               		<td>2.18s</td>
+            </tr>
+    		<tr style="background:tomato">
+    			<td>5</td>
+                <td width="60%"><a href="#_5Ethe_20service_20is_20executed_20with_20headers_24">^the service is executed with headers$</a></td><td>22</td>
+               		<td>0.01s</td>
+               		<td>0.01s</td>
+               		<td>0s</td>
+               		<td>0.06s</td>
+               		<td>0.27s</td>
+            </tr>
+    		<tr style="background:tomato">
+    			<td>6</td>
+                <td width="60%"><a href="#_5Ethe_20service_20should_20response_20Http_20code_20_3C(_5Cd_2B)_3E_24">^the service should response Http code &lt;(\d+)&gt;$</a></td><td>22</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0s</td>
+               		<td>0.01s</td>
+            </tr>
+    	</table>
+        </p>
+        <h1>Cucumber Usage Detailed Information</h1>
+
+        	<h3><a id="_5Ethe_20body_20response_24">^the body response$</a></h3>
+        <p>
+        	<table>
+        		<tr>
+        			<th>Step Name</th>
+        			<th>Duration</th>
+        			<th>Location</th>
+    			</tr>
+    				<tr><td rowspan="23">the body response</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0.552</td>
+    						<td>200_LoanPaymentHistory.feature:30</td>
+						</tr>
+    					<tr>
+    						<td>0.118</td>
+    						<td>200_LoanPaymentHistory.feature:77</td>
+						</tr>
+    					<tr>
+    						<td>0.12</td>
+    						<td>200_LoanPaymentHistory.feature:126</td>
+						</tr>
+    					<tr>
+    						<td>0.085</td>
+    						<td>400_ValidateRequest.feature:32</td>
+						</tr>
+    					<tr>
+    						<td>0.075</td>
+    						<td>400_ValidateRequest.feature:71</td>
+						</tr>
+    					<tr>
+    						<td>0.085</td>
+    						<td>400_ValidateRequest.feature:110</td>
+						</tr>
+    					<tr>
+    						<td>0.065</td>
+    						<td>400_ValidateRequest.feature:149</td>
+						</tr>
+    					<tr>
+    						<td>0.076</td>
+    						<td>400_ValidateRequest.feature:188</td>
+						</tr>
+    					<tr>
+    						<td>0.066</td>
+    						<td>400_ValidateRequest.feature:227</td>
+						</tr>
+    					<tr>
+    						<td>0.068</td>
+    						<td>400_ValidateRequest.feature:266</td>
+						</tr>
+    					<tr>
+    						<td>0.069</td>
+    						<td>400_ValidateRequest.feature:305</td>
+						</tr>
+    					<tr>
+    						<td>0.063</td>
+    						<td>400_ValidateRequest.feature:343</td>
+						</tr>
+    					<tr>
+    						<td>0.061</td>
+    						<td>400_ValidateRequest.feature:382</td>
+						</tr>
+    					<tr>
+    						<td>0.06</td>
+    						<td>400_ValidateRequest.feature:421</td>
+						</tr>
+    					<tr>
+    						<td>0.061</td>
+    						<td>400_ValidateRequest.feature:460</td>
+						</tr>
+    					<tr>
+    						<td>0.067</td>
+    						<td>400_ValidateRequest.feature:499</td>
+						</tr>
+    					<tr>
+    						<td>0.055</td>
+    						<td>400_ValidateRequest.feature:538</td>
+						</tr>
+    					<tr>
+    						<td>0.069</td>
+    						<td>400_ValidateRequest.feature:577</td>
+						</tr>
+    					<tr>
+    						<td>0.059</td>
+    						<td>400_ValidateRequest.feature:616</td>
+						</tr>
+    					<tr>
+    						<td>0.055</td>
+    						<td>400_ValidateRequest.feature:655</td>
+						</tr>
+    					<tr>
+    						<td>0.072</td>
+    						<td>400_ValidateRequest.feature:694</td>
+						</tr>
+    					<tr>
+    						<td>0.118</td>
+    						<td>404_ExecuteWithNotFound.feature:32</td>
+						</tr>
+            </table>
+        </p>
+        <p>
+        	<table class="none">
+        		<tr>
+        			<td class="none">
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+		<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>
+		<radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+		<stop offset="100%" style="stop-color:gold;stop-opacity:0.7" /></radialGradient>
+		<linearGradient id="grad3" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:green;stop-opacity:0.7" />
+		<stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+		<stop offset="100%" style="stop-color:red;stop-opacity:0.7" />
+		</linearGradient>
+	</defs>
+<rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)"/>
+			<line x1="30" y1="30" x2="30" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<line x1="30" y1="240" x2="350" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<polygon points="25,50 30,30 35,50"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<polygon points="350,240 330,245 330,235"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<!-- Scale Marks-->
+		<!--<line x1="40" y1="240" x2="40" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="42" y="253" font-size="8">0.6s</text>
+		<line x1="320" y1="240" x2="320" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="322" y="253" font-size="8">11.6s</text>-->
+
+		<text x="60" y="220" font-weight="bold" font-size="14"
+			transform="rotate(-90 20,220)">Frequency</text>
+			<text x="140" y="260" font-weight="bold" font-size="14">Duration</text>
+		<!-- Polygon -->
+		
+
+		<polygon
+			points="
+	        	40,240
+	        	40,50
+	        	80,50
+	        	80,240 
+	        	80,240
+	        	80,240
+	        	120,240
+	        	120,240 
+	        	120,240
+	        	120,240
+	        	160,240
+	        	160,240 
+	        	160,240
+	        	160,240
+	        	200,240
+	        	200,240 
+	        	200,240
+	        	200,240
+	        	240,240
+	        	240,240 
+	        	240,240
+	        	240,240
+	        	280,240
+	        	280,240 
+	        	280,240
+	        	280,230.952
+	        	320,230.952
+	        	320,240 
+			"
+			style="stroke:black;stroke-width:1" fill="url(#grad3)" />
+				<text x="53"
+				 	y="49" font-weight="bold" font-size="14">21</text>
+            <line x1="40" y1="240"
+            	  x2="40" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="42" y="248" font-size="8">
+            	0.05
+        	</text>
+            <line x1="80" y1="240"
+            	  x2="80" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="82" y="248" font-size="8">
+            	0.13
+        	</text>
+            <line x1="120" y1="240"
+            	  x2="120" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="122" y="248" font-size="8">
+            	0.2
+        	</text>
+            <line x1="160" y1="240"
+            	  x2="160" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="162" y="248" font-size="8">
+            	0.27
+        	</text>
+            <line x1="200" y1="240"
+            	  x2="200" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="202" y="248" font-size="8">
+            	0.34
+        	</text>
+            <line x1="240" y1="240"
+            	  x2="240" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="242" y="248" font-size="8">
+            	0.41
+        	</text>
+				<text x="293"
+				 	y="229" font-weight="bold" font-size="14">1</text>
+            <line x1="280" y1="240"
+            	  x2="280" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="282" y="248" font-size="8">
+            	0.48
+        	</text>
+</svg>
+    				</td>
+                    <td valign="top" class="none">
+                    	<p><table>
+                    	<tr><th colspan="2">Duration Characteristic</th></tr>
+		                <tr><th>Average</th><td>0.1s</td></tr>
+		                <tr><th>Median</th><td>0.07s</td></tr>
+		                <tr><th>Variance</th><td>0.01</td></tr>
+		                <tr><th>Skewness</th><td>4.12</td></tr>
+		                <tr><th>Minimum</th><td>0.05s</td></tr>
+		                <tr><th>Maximum</th><td>0.55s</td></tr>
+		                <tr><th>Total</th><td>2.12s</td></tr>
+		                </table>
+		                </p>
+                	</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+        	<a href="#top">To Overview Table</a>
+    	</p>
+        	<h3><a id="_5Ethe_20body_20request_24">^the body request$</a></h3>
+        <p>
+        	<table>
+        		<tr>
+        			<th>Step Name</th>
+        			<th>Duration</th>
+        			<th>Location</th>
+    			</tr>
+    				<tr><td rowspan="23">the body request</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:19</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:67</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:116</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:21</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:60</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:99</td>
+						</tr>
+    					<tr>
+    						<td>0.007</td>
+    						<td>400_ValidateRequest.feature:138</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:177</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:216</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:255</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:294</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:333</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:371</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:410</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:449</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:488</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:527</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:566</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:605</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:644</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:683</td>
+						</tr>
+    					<tr>
+    						<td>0.004</td>
+    						<td>404_ExecuteWithNotFound.feature:21</td>
+						</tr>
+            </table>
+        </p>
+        <p>
+        	<table class="none">
+        		<tr>
+        			<td class="none">
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+		<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>
+		<radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+		<stop offset="100%" style="stop-color:gold;stop-opacity:0.7" /></radialGradient>
+		<linearGradient id="grad3" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:green;stop-opacity:0.7" />
+		<stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+		<stop offset="100%" style="stop-color:red;stop-opacity:0.7" />
+		</linearGradient>
+	</defs>
+<rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)"/>
+			<line x1="30" y1="30" x2="30" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<line x1="30" y1="240" x2="350" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<polygon points="25,50 30,30 35,50"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<polygon points="350,240 330,245 330,235"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<!-- Scale Marks-->
+		<!--<line x1="40" y1="240" x2="40" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="42" y="253" font-size="8">0.6s</text>
+		<line x1="320" y1="240" x2="320" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="322" y="253" font-size="8">11.6s</text>-->
+
+		<text x="60" y="220" font-weight="bold" font-size="14"
+			transform="rotate(-90 20,220)">Frequency</text>
+			<text x="140" y="260" font-weight="bold" font-size="14">Duration</text>
+		<!-- Polygon -->
+		
+
+		<polygon
+			points="
+	        	40,240
+	        	40,50
+	        	80,50
+	        	80,240 
+	        	80,240
+	        	80,240
+	        	120,240
+	        	120,240 
+	        	120,240
+	        	120,240
+	        	160,240
+	        	160,240 
+	        	160,240
+	        	160,230.5
+	        	200,230.5
+	        	200,240 
+	        	200,240
+	        	200,240
+	        	240,240
+	        	240,240 
+	        	240,240
+	        	240,240
+	        	280,240
+	        	280,240 
+	        	280,240
+	        	280,230.5
+	        	320,230.5
+	        	320,240 
+			"
+			style="stroke:black;stroke-width:1" fill="url(#grad3)" />
+				<text x="53"
+				 	y="48" font-weight="bold" font-size="14">20</text>
+            <line x1="40" y1="240"
+            	  x2="40" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="42" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="80" y1="240"
+            	  x2="80" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="82" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="120" y1="240"
+            	  x2="120" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="122" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="173"
+				 	y="229" font-weight="bold" font-size="14">1</text>
+            <line x1="160" y1="240"
+            	  x2="160" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="162" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="200" y1="240"
+            	  x2="200" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="202" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="240" y1="240"
+            	  x2="240" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="242" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="293"
+				 	y="229" font-weight="bold" font-size="14">1</text>
+            <line x1="280" y1="240"
+            	  x2="280" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="282" y="248" font-size="8">
+            	0.01
+        	</text>
+</svg>
+    				</td>
+                    <td valign="top" class="none">
+                    	<p><table>
+                    	<tr><th colspan="2">Duration Characteristic</th></tr>
+		                <tr><th>Average</th><td>0s</td></tr>
+		                <tr><th>Median</th><td>0s</td></tr>
+		                <tr><th>Variance</th><td>0</td></tr>
+		                <tr><th>Skewness</th><td>3.15</td></tr>
+		                <tr><th>Minimum</th><td>0s</td></tr>
+		                <tr><th>Maximum</th><td>0.01s</td></tr>
+		                <tr><th>Total</th><td>0.02s</td></tr>
+		                </table>
+		                </p>
+                	</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+        	<a href="#top">To Overview Table</a>
+    	</p>
+        	<h3><a id="_5Ethe_20simulated_20response_24">^the simulated response$</a></h3>
+        <p>
+        	<table>
+        		<tr>
+        			<th>Step Name</th>
+        			<th>Duration</th>
+        			<th>Location</th>
+    			</tr>
+    				<tr><td rowspan="23">the simulated response</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:6</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:54</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:101</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:6</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:45</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:84</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:123</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:162</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:201</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:240</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:279</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:318</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:356</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:395</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:434</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:473</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:512</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:551</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:590</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:629</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:668</td>
+						</tr>
+    					<tr>
+    						<td>0.002</td>
+    						<td>404_ExecuteWithNotFound.feature:6</td>
+						</tr>
+            </table>
+        </p>
+        <p>
+        	<table class="none">
+        		<tr>
+        			<td class="none">
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+		<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>
+		<radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+		<stop offset="100%" style="stop-color:gold;stop-opacity:0.7" /></radialGradient>
+		<linearGradient id="grad3" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:green;stop-opacity:0.7" />
+		<stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+		<stop offset="100%" style="stop-color:red;stop-opacity:0.7" />
+		</linearGradient>
+	</defs>
+<rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)"/>
+			<line x1="30" y1="30" x2="30" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<line x1="30" y1="240" x2="350" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<polygon points="25,50 30,30 35,50"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<polygon points="350,240 330,245 330,235"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<!-- Scale Marks-->
+		<!--<line x1="40" y1="240" x2="40" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="42" y="253" font-size="8">0.6s</text>
+		<line x1="320" y1="240" x2="320" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="322" y="253" font-size="8">11.6s</text>-->
+
+		<text x="60" y="220" font-weight="bold" font-size="14"
+			transform="rotate(-90 20,220)">Frequency</text>
+			<text x="140" y="260" font-weight="bold" font-size="14">Duration</text>
+		<!-- Polygon -->
+		
+
+		<polygon
+			points="
+	        	40,240
+	        	40,50
+	        	80,50
+	        	80,240 
+	        	80,240
+	        	80,230
+	        	120,230
+	        	120,240 
+	        	120,240
+	        	120,240
+	        	160,240
+	        	160,240 
+	        	160,240
+	        	160,230
+	        	200,230
+	        	200,240 
+	        	200,240
+	        	200,240
+	        	240,240
+	        	240,240 
+	        	240,240
+	        	240,240
+	        	280,240
+	        	280,240 
+	        	280,240
+	        	280,230
+	        	320,230
+	        	320,240 
+			"
+			style="stroke:black;stroke-width:1" fill="url(#grad3)" />
+				<text x="53"
+				 	y="48" font-weight="bold" font-size="14">19</text>
+            <line x1="40" y1="240"
+            	  x2="40" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="42" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="93"
+				 	y="228" font-weight="bold" font-size="14">1</text>
+            <line x1="80" y1="240"
+            	  x2="80" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="82" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="120" y1="240"
+            	  x2="120" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="122" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="173"
+				 	y="228" font-weight="bold" font-size="14">1</text>
+            <line x1="160" y1="240"
+            	  x2="160" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="162" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="200" y1="240"
+            	  x2="200" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="202" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="240" y1="240"
+            	  x2="240" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="242" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="293"
+				 	y="228" font-weight="bold" font-size="14">1</text>
+            <line x1="280" y1="240"
+            	  x2="280" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="282" y="248" font-size="8">
+            	0
+        	</text>
+</svg>
+    				</td>
+                    <td valign="top" class="none">
+                    	<p><table>
+                    	<tr><th colspan="2">Duration Characteristic</th></tr>
+		                <tr><th>Average</th><td>0s</td></tr>
+		                <tr><th>Median</th><td>0s</td></tr>
+		                <tr><th>Variance</th><td>0</td></tr>
+		                <tr><th>Skewness</th><td>3.18</td></tr>
+		                <tr><th>Minimum</th><td>0s</td></tr>
+		                <tr><th>Maximum</th><td>0s</td></tr>
+		                <tr><th>Total</th><td>0.01s</td></tr>
+		                </table>
+		                </p>
+                	</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+        	<a href="#top">To Overview Table</a>
+    	</p>
+        	<h3><a id="_5Ethe_20service_20with_20url_20_22(.*_3F)_22_24">^the service with url &quot;(.*?)&quot;$</a></h3>
+        <p>
+        	<table>
+        		<tr>
+        			<th>Step Name</th>
+        			<th>Duration</th>
+        			<th>Location</th>
+    			</tr>
+    				<tr><td rowspan="23">the service with url &quot;POST http://lndt-api-a-loan-payment-history-mx-uat1.cfapps-gt1-dev.lac.nsroot.net/api/v1/loans/payments/retrieve&quot;</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>1.537</td>
+    						<td>200_LoanPaymentHistory.feature:5</td>
+						</tr>
+    					<tr>
+    						<td>0.013</td>
+    						<td>200_LoanPaymentHistory.feature:53</td>
+						</tr>
+    					<tr>
+    						<td>0.015</td>
+    						<td>200_LoanPaymentHistory.feature:100</td>
+						</tr>
+    					<tr>
+    						<td>0.058</td>
+    						<td>400_ValidateRequest.feature:5</td>
+						</tr>
+    					<tr>
+    						<td>0.057</td>
+    						<td>400_ValidateRequest.feature:44</td>
+						</tr>
+    					<tr>
+    						<td>0.061</td>
+    						<td>400_ValidateRequest.feature:83</td>
+						</tr>
+    					<tr>
+    						<td>0.042</td>
+    						<td>400_ValidateRequest.feature:122</td>
+						</tr>
+    					<tr>
+    						<td>0.034</td>
+    						<td>400_ValidateRequest.feature:161</td>
+						</tr>
+    					<tr>
+    						<td>0.036</td>
+    						<td>400_ValidateRequest.feature:200</td>
+						</tr>
+    					<tr>
+    						<td>0.035</td>
+    						<td>400_ValidateRequest.feature:239</td>
+						</tr>
+    					<tr>
+    						<td>0.031</td>
+    						<td>400_ValidateRequest.feature:278</td>
+						</tr>
+    					<tr>
+    						<td>0.027</td>
+    						<td>400_ValidateRequest.feature:317</td>
+						</tr>
+    					<tr>
+    						<td>0.026</td>
+    						<td>400_ValidateRequest.feature:355</td>
+						</tr>
+    					<tr>
+    						<td>0.019</td>
+    						<td>400_ValidateRequest.feature:394</td>
+						</tr>
+    					<tr>
+    						<td>0.022</td>
+    						<td>400_ValidateRequest.feature:433</td>
+						</tr>
+    					<tr>
+    						<td>0.03</td>
+    						<td>400_ValidateRequest.feature:472</td>
+						</tr>
+    					<tr>
+    						<td>0.027</td>
+    						<td>400_ValidateRequest.feature:511</td>
+						</tr>
+    					<tr>
+    						<td>0.022</td>
+    						<td>400_ValidateRequest.feature:550</td>
+						</tr>
+    					<tr>
+    						<td>0.018</td>
+    						<td>400_ValidateRequest.feature:589</td>
+						</tr>
+    					<tr>
+    						<td>0.018</td>
+    						<td>400_ValidateRequest.feature:628</td>
+						</tr>
+    					<tr>
+    						<td>0.025</td>
+    						<td>400_ValidateRequest.feature:667</td>
+						</tr>
+    					<tr>
+    						<td>0.023</td>
+    						<td>404_ExecuteWithNotFound.feature:5</td>
+						</tr>
+            </table>
+        </p>
+        <p>
+        	<table class="none">
+        		<tr>
+        			<td class="none">
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+		<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>
+		<radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+		<stop offset="100%" style="stop-color:gold;stop-opacity:0.7" /></radialGradient>
+		<linearGradient id="grad3" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:green;stop-opacity:0.7" />
+		<stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+		<stop offset="100%" style="stop-color:red;stop-opacity:0.7" />
+		</linearGradient>
+	</defs>
+<rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)"/>
+			<line x1="30" y1="30" x2="30" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<line x1="30" y1="240" x2="350" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<polygon points="25,50 30,30 35,50"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<polygon points="350,240 330,245 330,235"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<!-- Scale Marks-->
+		<!--<line x1="40" y1="240" x2="40" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="42" y="253" font-size="8">0.6s</text>
+		<line x1="320" y1="240" x2="320" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="322" y="253" font-size="8">11.6s</text>-->
+
+		<text x="60" y="220" font-weight="bold" font-size="14"
+			transform="rotate(-90 20,220)">Frequency</text>
+			<text x="140" y="260" font-weight="bold" font-size="14">Duration</text>
+		<!-- Polygon -->
+		
+
+		<polygon
+			points="
+	        	40,240
+	        	40,50
+	        	80,50
+	        	80,240 
+	        	80,240
+	        	80,240
+	        	120,240
+	        	120,240 
+	        	120,240
+	        	120,240
+	        	160,240
+	        	160,240 
+	        	160,240
+	        	160,240
+	        	200,240
+	        	200,240 
+	        	200,240
+	        	200,240
+	        	240,240
+	        	240,240 
+	        	240,240
+	        	240,240
+	        	280,240
+	        	280,240 
+	        	280,240
+	        	280,230.952
+	        	320,230.952
+	        	320,240 
+			"
+			style="stroke:black;stroke-width:1" fill="url(#grad3)" />
+				<text x="53"
+				 	y="49" font-weight="bold" font-size="14">21</text>
+            <line x1="40" y1="240"
+            	  x2="40" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="42" y="248" font-size="8">
+            	0.01
+        	</text>
+            <line x1="80" y1="240"
+            	  x2="80" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="82" y="248" font-size="8">
+            	0.23
+        	</text>
+            <line x1="120" y1="240"
+            	  x2="120" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="122" y="248" font-size="8">
+            	0.45
+        	</text>
+            <line x1="160" y1="240"
+            	  x2="160" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="162" y="248" font-size="8">
+            	0.67
+        	</text>
+            <line x1="200" y1="240"
+            	  x2="200" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="202" y="248" font-size="8">
+            	0.88
+        	</text>
+            <line x1="240" y1="240"
+            	  x2="240" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="242" y="248" font-size="8">
+            	1.1
+        	</text>
+				<text x="293"
+				 	y="229" font-weight="bold" font-size="14">1</text>
+            <line x1="280" y1="240"
+            	  x2="280" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="282" y="248" font-size="8">
+            	1.32
+        	</text>
+</svg>
+    				</td>
+                    <td valign="top" class="none">
+                    	<p><table>
+                    	<tr><th colspan="2">Duration Characteristic</th></tr>
+		                <tr><th>Average</th><td>0.1s</td></tr>
+		                <tr><th>Median</th><td>0.03s</td></tr>
+		                <tr><th>Variance</th><td>0.1</td></tr>
+		                <tr><th>Skewness</th><td>4.35</td></tr>
+		                <tr><th>Minimum</th><td>0.01s</td></tr>
+		                <tr><th>Maximum</th><td>1.54s</td></tr>
+		                <tr><th>Total</th><td>2.18s</td></tr>
+		                </table>
+		                </p>
+                	</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+        	<a href="#top">To Overview Table</a>
+    	</p>
+        	<h3><a id="_5Ethe_20service_20is_20executed_20with_20headers_24">^the service is executed with headers$</a></h3>
+        <p>
+        	<table>
+        		<tr>
+        			<th>Step Name</th>
+        			<th>Duration</th>
+        			<th>Location</th>
+    			</tr>
+    				<tr><td rowspan="23">the service is executed with headers</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0.065</td>
+    						<td>200_LoanPaymentHistory.feature:9</td>
+						</tr>
+    					<tr>
+    						<td>0.004</td>
+    						<td>200_LoanPaymentHistory.feature:57</td>
+						</tr>
+    					<tr>
+    						<td>0.006</td>
+    						<td>200_LoanPaymentHistory.feature:104</td>
+						</tr>
+    					<tr>
+    						<td>0.016</td>
+    						<td>400_ValidateRequest.feature:9</td>
+						</tr>
+    					<tr>
+    						<td>0.021</td>
+    						<td>400_ValidateRequest.feature:48</td>
+						</tr>
+    					<tr>
+    						<td>0.02</td>
+    						<td>400_ValidateRequest.feature:87</td>
+						</tr>
+    					<tr>
+    						<td>0.01</td>
+    						<td>400_ValidateRequest.feature:126</td>
+						</tr>
+    					<tr>
+    						<td>0.01</td>
+    						<td>400_ValidateRequest.feature:165</td>
+						</tr>
+    					<tr>
+    						<td>0.008</td>
+    						<td>400_ValidateRequest.feature:204</td>
+						</tr>
+    					<tr>
+    						<td>0.039</td>
+    						<td>400_ValidateRequest.feature:243</td>
+						</tr>
+    					<tr>
+    						<td>0.006</td>
+    						<td>400_ValidateRequest.feature:282</td>
+						</tr>
+    					<tr>
+    						<td>0.008</td>
+    						<td>400_ValidateRequest.feature:321</td>
+						</tr>
+    					<tr>
+    						<td>0.006</td>
+    						<td>400_ValidateRequest.feature:359</td>
+						</tr>
+    					<tr>
+    						<td>0.005</td>
+    						<td>400_ValidateRequest.feature:398</td>
+						</tr>
+    					<tr>
+    						<td>0.005</td>
+    						<td>400_ValidateRequest.feature:437</td>
+						</tr>
+    					<tr>
+    						<td>0.011</td>
+    						<td>400_ValidateRequest.feature:476</td>
+						</tr>
+    					<tr>
+    						<td>0.007</td>
+    						<td>400_ValidateRequest.feature:515</td>
+						</tr>
+    					<tr>
+    						<td>0.007</td>
+    						<td>400_ValidateRequest.feature:554</td>
+						</tr>
+    					<tr>
+    						<td>0.004</td>
+    						<td>400_ValidateRequest.feature:593</td>
+						</tr>
+    					<tr>
+    						<td>0.003</td>
+    						<td>400_ValidateRequest.feature:632</td>
+						</tr>
+    					<tr>
+    						<td>0.003</td>
+    						<td>400_ValidateRequest.feature:671</td>
+						</tr>
+    					<tr>
+    						<td>0.006</td>
+    						<td>404_ExecuteWithNotFound.feature:9</td>
+						</tr>
+            </table>
+        </p>
+        <p>
+        	<table class="none">
+        		<tr>
+        			<td class="none">
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+		<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>
+		<radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+		<stop offset="100%" style="stop-color:gold;stop-opacity:0.7" /></radialGradient>
+		<linearGradient id="grad3" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:green;stop-opacity:0.7" />
+		<stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+		<stop offset="100%" style="stop-color:red;stop-opacity:0.7" />
+		</linearGradient>
+	</defs>
+<rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)"/>
+			<line x1="30" y1="30" x2="30" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<line x1="30" y1="240" x2="350" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<polygon points="25,50 30,30 35,50"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<polygon points="350,240 330,245 330,235"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<!-- Scale Marks-->
+		<!--<line x1="40" y1="240" x2="40" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="42" y="253" font-size="8">0.6s</text>
+		<line x1="320" y1="240" x2="320" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="322" y="253" font-size="8">11.6s</text>-->
+
+		<text x="60" y="220" font-weight="bold" font-size="14"
+			transform="rotate(-90 20,220)">Frequency</text>
+			<text x="140" y="260" font-weight="bold" font-size="14">Duration</text>
+		<!-- Polygon -->
+		
+
+		<polygon
+			points="
+	        	40,240
+	        	40,50
+	        	80,50
+	        	80,240 
+	        	80,240
+	        	80,217.647
+	        	120,217.647
+	        	120,240 
+	        	120,240
+	        	120,228.824
+	        	160,228.824
+	        	160,240 
+	        	160,240
+	        	160,240
+	        	200,240
+	        	200,240 
+	        	200,240
+	        	200,228.824
+	        	240,228.824
+	        	240,240 
+	        	240,240
+	        	240,240
+	        	280,240
+	        	280,240 
+	        	280,240
+	        	280,228.824
+	        	320,228.824
+	        	320,240 
+			"
+			style="stroke:black;stroke-width:1" fill="url(#grad3)" />
+				<text x="53"
+				 	y="49" font-weight="bold" font-size="14">17</text>
+            <line x1="40" y1="240"
+            	  x2="40" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="42" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="93"
+				 	y="216" font-weight="bold" font-size="14">2</text>
+            <line x1="80" y1="240"
+            	  x2="80" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="82" y="248" font-size="8">
+            	0.01
+        	</text>
+				<text x="133"
+				 	y="227" font-weight="bold" font-size="14">1</text>
+            <line x1="120" y1="240"
+            	  x2="120" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="122" y="248" font-size="8">
+            	0.02
+        	</text>
+            <line x1="160" y1="240"
+            	  x2="160" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="162" y="248" font-size="8">
+            	0.03
+        	</text>
+				<text x="213"
+				 	y="227" font-weight="bold" font-size="14">1</text>
+            <line x1="200" y1="240"
+            	  x2="200" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="202" y="248" font-size="8">
+            	0.04
+        	</text>
+            <line x1="240" y1="240"
+            	  x2="240" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="242" y="248" font-size="8">
+            	0.05
+        	</text>
+				<text x="293"
+				 	y="227" font-weight="bold" font-size="14">1</text>
+            <line x1="280" y1="240"
+            	  x2="280" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="282" y="248" font-size="8">
+            	0.06
+        	</text>
+</svg>
+    				</td>
+                    <td valign="top" class="none">
+                    	<p><table>
+                    	<tr><th colspan="2">Duration Characteristic</th></tr>
+		                <tr><th>Average</th><td>0.01s</td></tr>
+		                <tr><th>Median</th><td>0.01s</td></tr>
+		                <tr><th>Variance</th><td>0</td></tr>
+		                <tr><th>Skewness</th><td>2.66</td></tr>
+		                <tr><th>Minimum</th><td>0s</td></tr>
+		                <tr><th>Maximum</th><td>0.06s</td></tr>
+		                <tr><th>Total</th><td>0.27s</td></tr>
+		                </table>
+		                </p>
+                	</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+        	<a href="#top">To Overview Table</a>
+    	</p>
+        	<h3><a id="_5Ethe_20service_20should_20response_20Http_20code_20_3C(_5Cd_2B)_3E_24">^the service should response Http code &lt;(\d+)&gt;$</a></h3>
+        <p>
+        	<table>
+        		<tr>
+        			<th>Step Name</th>
+        			<th>Duration</th>
+        			<th>Location</th>
+    			</tr>
+    				<tr><td rowspan="4">the service should response Http code &lt;200&gt;</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:29</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:76</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>200_LoanPaymentHistory.feature:125</td>
+						</tr>
+    				<tr><td rowspan="19">the service should response Http code &lt;400&gt;</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:31</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:70</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:109</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:148</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:187</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:226</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:265</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:304</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:342</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:381</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:420</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:459</td>
+						</tr>
+    					<tr>
+    						<td>0.001</td>
+    						<td>400_ValidateRequest.feature:498</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:537</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:576</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:615</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:654</td>
+						</tr>
+    					<tr>
+    						<td>0</td>
+    						<td>400_ValidateRequest.feature:693</td>
+						</tr>
+    				<tr><td rowspan="2">the service should response Http code &lt;404&gt;</td><td colspan="2">&#160;</td></tr>
+    					<tr>
+    						<td>0</td>
+    						<td>404_ExecuteWithNotFound.feature:31</td>
+						</tr>
+            </table>
+        </p>
+        <p>
+        	<table class="none">
+        		<tr>
+        			<td class="none">
+<svg  xmlns="http://www.w3.org/2000/svg" version="1.1" width="400" height="300">
+	<defs>
+		<filter id="f1" x="0" y="0" width="200%" height="200%">
+		<feOffset result="offOut" in="SourceAlpha" dx="10" dy="10" />
+		<feGaussianBlur result="blurOut" in="offOut" stdDeviation="10" />
+		<feBlend in="SourceGraphic" in2="blurOut" mode="normal" /></filter>
+		<radialGradient id="grad1" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:white;stop-opacity:0.1" />
+		<stop offset="100%" style="stop-color:gold;stop-opacity:0.7" /></radialGradient>
+		<linearGradient id="grad3" cx="0%" cy="100%" r="150%" fx="0%"
+			fy="100%">
+		<stop offset="0%" style="stop-color:green;stop-opacity:0.7" />
+		<stop offset="50%" style="stop-color:yellow;stop-opacity:0.7" />
+		<stop offset="100%" style="stop-color:red;stop-opacity:0.7" />
+		</linearGradient>
+	</defs>
+<rect width="90%" height="90%" stroke="black" stroke-width="1" fill="url(#grad1)" filter="url(#f1)"/>
+			<line x1="30" y1="30" x2="30" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<line x1="30" y1="240" x2="350" y2="240"
+			style="stroke:black;stroke-width:1" />
+		<polygon points="25,50 30,30 35,50"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<polygon points="350,240 330,245 330,235"
+			style="fill:black;stroke:black;stroke-width:1" />
+		<!-- Scale Marks-->
+		<!--<line x1="40" y1="240" x2="40" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="42" y="253" font-size="8">0.6s</text>
+		<line x1="320" y1="240" x2="320" y2="245"
+			style="stroke:black;stroke-width:1" />
+		<text x="322" y="253" font-size="8">11.6s</text>-->
+
+		<text x="60" y="220" font-weight="bold" font-size="14"
+			transform="rotate(-90 20,220)">Frequency</text>
+			<text x="140" y="260" font-weight="bold" font-size="14">Duration</text>
+		<!-- Polygon -->
+		
+
+		<polygon
+			points="
+	        	40,240
+	        	40,50
+	        	80,50
+	        	80,240 
+	        	80,240
+	        	80,195.294
+	        	120,195.294
+	        	120,240 
+	        	120,240
+	        	120,240
+	        	160,240
+	        	160,240 
+	        	160,240
+	        	160,240
+	        	200,240
+	        	200,240 
+	        	200,240
+	        	200,240
+	        	240,240
+	        	240,240 
+	        	240,240
+	        	240,240
+	        	280,240
+	        	280,240 
+	        	280,240
+	        	280,228.824
+	        	320,228.824
+	        	320,240 
+			"
+			style="stroke:black;stroke-width:1" fill="url(#grad3)" />
+				<text x="53"
+				 	y="49" font-weight="bold" font-size="14">17</text>
+            <line x1="40" y1="240"
+            	  x2="40" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="42" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="93"
+				 	y="194" font-weight="bold" font-size="14">4</text>
+            <line x1="80" y1="240"
+            	  x2="80" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="82" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="120" y1="240"
+            	  x2="120" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="122" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="160" y1="240"
+            	  x2="160" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="162" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="200" y1="240"
+            	  x2="200" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="202" y="248" font-size="8">
+            	0
+        	</text>
+            <line x1="240" y1="240"
+            	  x2="240" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="242" y="248" font-size="8">
+            	0
+        	</text>
+				<text x="293"
+				 	y="227" font-weight="bold" font-size="14">1</text>
+            <line x1="280" y1="240"
+            	  x2="280" y2="242" style="stroke:black;stroke-width:1" />
+            <text x="282" y="248" font-size="8">
+            	0
+        	</text>
+</svg>
+    				</td>
+                    <td valign="top" class="none">
+                    	<p><table>
+                    	<tr><th colspan="2">Duration Characteristic</th></tr>
+		                <tr><th>Average</th><td>0s</td></tr>
+		                <tr><th>Median</th><td>0s</td></tr>
+		                <tr><th>Variance</th><td>0</td></tr>
+		                <tr><th>Skewness</th><td>3.38</td></tr>
+		                <tr><th>Minimum</th><td>0s</td></tr>
+		                <tr><th>Maximum</th><td>0s</td></tr>
+		                <tr><th>Total</th><td>0.01s</td></tr>
+		                </table>
+		                </p>
+                	</td>
+                </tr>
+            </table>
+        </p>
+        <p>
+        	<a href="#top">To Overview Table</a>
+    	</p>
+
+    </body>
+</html>
